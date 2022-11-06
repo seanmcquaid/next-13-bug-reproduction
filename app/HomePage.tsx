@@ -6,10 +6,15 @@
 import Post from '../types/Post';
 
 export default function HomePage({ recentPosts }: { recentPosts: Post[] }) {
+  const handleOnClick = () => {
+    throw new Error('Error');
+  };
   return (
     <div>
       {recentPosts.map(post => (
-        <div key={post.id}>{post.title}</div>
+        <div key={post.id} onClick={handleOnClick}>
+          {post.title}
+        </div>
       ))}
     </div>
   );

@@ -3,7 +3,7 @@ import HomePage from './HomePage';
 import Post from '../types/Post';
 
 async function getPosts(): Promise<Post[]> {
-  const res = await fetch('https://...');
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   return await res.json();
 }
 
